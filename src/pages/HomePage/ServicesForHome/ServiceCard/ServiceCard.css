@@ -1,0 +1,4 @@
+.service-card-credentials li {
+    list-style: square inside url("https://i.postimg.cc/nhbRr6wy/bullet-point-orange.png");
+    color: var(--grey);
+}

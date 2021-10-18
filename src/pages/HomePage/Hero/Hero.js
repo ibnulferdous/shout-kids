@@ -1,10 +1,9 @@
 import React from 'react';
 import './Hero.css';
-import heroImage from '../../../images/HomePage-Hero.jpg';
 
 const Hero = () => {
     return (
-        <div>
+        <main>
             <div className="container-fluid mt-5">
                 <div className="row hero-content-div">
                     <div className="col-md gx-0 hero-left">
@@ -20,8 +19,8 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="w-100"></div>
-                <div className="row shapes-div overflow-hidden">
-                    <div className="col-md-7 d-flex justify-content-end">
+                <div className="row shapes-div">
+                    <div className="col-md-7 d-flex justify-content-end mt-5">
                         <div className="egg-shape"></div>
                     </div>
                     <div className="col-md-5 gx-0 d-flex justify-content-end">
@@ -29,7 +28,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

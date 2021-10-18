@@ -1,0 +1,16 @@
+footer {
+    background: url('https://i.postimg.cc/Kj208WfG/orange-shape-2.png') no-repeat 66% 5% /21%;
+}
+
+.footer-credit-div {
+    border-top: 1px solid var(--black);
+}
+
+.social-icons a {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.social-icons a:hover {
+    color: var(--grey);
+}
