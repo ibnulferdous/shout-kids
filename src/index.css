@@ -1,10 +1,21 @@
+:root {
+  --cream: #FFF9F1;
+  --white: #ffffff;
+  --pink: #FEAEC5;
+  --yellow: #FEE481;
+  --blue: #77D7EB;
+  --orange: #FFBF78;
+  --black: #1E1E1E;
+  --grey: #8f8c88;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Sen', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cream);
+  color: var(--black);
 }
 
 code {

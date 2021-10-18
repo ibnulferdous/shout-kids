@@ -1,0 +1,9 @@
+.nav-container {
+    min-height: 100px;
+}
+
+.brand-name {
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    padding: 2px 7px;
+}
