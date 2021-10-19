@@ -7,3 +7,23 @@
     border-bottom: 2px solid var(--black);
     padding: 2px 7px;
 }
+
+.nav-custom-link {
+    text-decoration: none;
+    padding: 0;
+    color: rgba(0,0,0,.55);
+}
+
+/* .user-info {
+
+} */
+
+.navbar-user-pic {
+    max-width: 27px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.nav-custom-link:hover {
+    color: rgba(0,0,0,.7);
+}

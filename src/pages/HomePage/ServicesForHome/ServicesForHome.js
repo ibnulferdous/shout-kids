@@ -7,7 +7,7 @@ const ServicesForHome = () => {
     const [services, setServices] = useState([]);
 
     useEffect( () => {
-        fetch('./therapyServices.json')
+        fetch('https://ibnulferdous.github.io/helthcare-data/therapyServices.json')
             .then(res => res.json())
             .then(data => setServices(data))
     } ,[]);

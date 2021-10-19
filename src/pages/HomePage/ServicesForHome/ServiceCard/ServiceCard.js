@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './ServiceCard.css';
 
 const ServiceCard = ({ service }) => {
     
-    const { name, image, description, duration, price } = service;
+    const { name, image, description, duration, price, id } = service;
     
     console.log(service)
 
@@ -32,7 +33,9 @@ const ServiceCard = ({ service }) => {
                             {durationtext}
                             <li>Fee: ${price}</li>
                         </ul>
-                        <button className="theme-button mt-3">View Details</button>
+                        <Link to={`/service-details/${id}`}>
+                            <button className="theme-button mt-3">View Details</button>
+                        </Link>
                     </Card.Body>
                 </Card>
             </Col>

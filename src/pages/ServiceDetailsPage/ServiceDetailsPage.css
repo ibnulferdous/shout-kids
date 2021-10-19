@@ -1,0 +1,18 @@
+.services-details-page .section-1 {
+    background: url('../../images/blue-shape.png') no-repeat 110% 30% /auto;
+}
+
+.services-details-image {
+    width: 100%;
+    max-width: 700px;
+}
+
+.therapist-image {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+.service-info-div li {
+    list-style: square inside url("https://i.postimg.cc/nhbRr6wy/bullet-point-orange.png");
+}

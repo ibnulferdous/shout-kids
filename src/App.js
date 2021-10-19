@@ -8,6 +8,8 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import AuthProvider from './contexts/AuthProvider';
+import ServiceDetailsPage from './pages/ServiceDetailsPage/ServiceDetailsPage';
+import PrivateRoute from './pages/LoginPage/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
             <Route path="/home">
               <HomePage></HomePage>
             </Route>
+            <PrivateRoute path="/service-details/:serviceId">
+              <ServiceDetailsPage></ServiceDetailsPage>
+            </PrivateRoute>
             <Route path="/login">
               <LoginPage></LoginPage>
             </Route>
