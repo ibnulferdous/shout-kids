@@ -7,33 +7,38 @@ import {
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <SiteNavbar></SiteNavbar>
+      <AuthProvider>
+        <Router>
+          <SiteNavbar></SiteNavbar>
 
-        <Switch>
-          <Route path="/home">
-            <HomePage></HomePage>
-          </Route>
-          <Route path="/login">
-            <LoginPage></LoginPage>
-          </Route>
-          <Route path="/register">
-            <RegisterPage></RegisterPage>
-          </Route>
-          <Route exact path="/">
-            <HomePage></HomePage>
-          </Route>
-          <Route path="*">
-            <NotFoundPage></NotFoundPage>
-          </Route>
-        </Switch>
+          {/* Switch Starts */}
+          <Switch>
+            <Route path="/home">
+              <HomePage></HomePage>
+            </Route>
+            <Route path="/login">
+              <LoginPage></LoginPage>
+            </Route>
+            <Route path="/register">
+              <RegisterPage></RegisterPage>
+            </Route>
+            <Route exact path="/">
+              <HomePage></HomePage>
+            </Route>
+            <Route path="*">
+              <NotFoundPage></NotFoundPage>
+            </Route>
+          </Switch>
+          {/* Switch ends */}
 
-        <Footer></Footer>
-      </Router>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
