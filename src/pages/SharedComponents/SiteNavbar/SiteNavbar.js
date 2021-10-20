@@ -8,18 +8,6 @@ import defaultUserPic from '../../../images/user-default.jpg';
 const SiteNavbar = () => {
     const { user, logOut } = useAuth();
 
-    let userIdentity = "";
-
-    if(user) {
-        if(user.displayName) {
-            userIdentity = user.displayName;
-        } else if(user.email) {
-            userIdentity = user.displayName;
-        } else {
-            userIdentity = "Unknown";
-        }
-    }
-
     return (
         <div className="nav-container d-flex align-items-center">
             <div className="flex-grow-1">
@@ -47,7 +35,7 @@ const SiteNavbar = () => {
                                 {
                                     user && <Nav.Link className="user-info d-flex align-items-center">
                                         <img src={user?.photoURL ? user?.photoURL : defaultUserPic} className="navbar-user-pic mx-2" alt="U" />
-                                        <span>{userIdentity}</span>
+                                        <span>{user?.displayName ? user.displayName : user.email}</span>
                                     </Nav.Link>                                    
                                 }
 

@@ -27,7 +27,7 @@ const useFirebase = () => {
         const googleProvider = new GoogleAuthProvider();
         setIsLoading(true);
 
-        return signInWithPopup(auth, googleProvider)
+        signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user);
                 setErrorFirebase("");
@@ -46,6 +46,8 @@ const useFirebase = () => {
         const email = input.email;
         const password = input.password;
 
+        setIsLoading(true);
+
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
@@ -57,17 +59,21 @@ const useFirebase = () => {
             .catch((error) => {
                 setErrorFirebase(error.message);
                 setSuccessFirebase("");
-            });
+            })
+            .finally(() => setIsLoading(false));
     }
 
     // Set user's name 
     const setUserName = (name) => {
+        setIsLoading(true);
+
         updateProfile(auth.currentUser, {
             displayName: name
         })
         .then(result => {
             // User Name added
         })
+        .finally(() => setIsLoading(false));
     }
 
     // verify email
@@ -83,6 +89,8 @@ const useFirebase = () => {
         const email = input.email;
         const password = input.password;
 
+        setIsLoading(true);
+
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
@@ -93,6 +101,7 @@ const useFirebase = () => {
                 setErrorFirebase(error.message);
                 setSuccessFirebase("");
             })
+            .finally(() => setIsLoading(false));
     }
 
     // Log out

@@ -53,10 +53,6 @@ const RegisterPage = () => {
                                     minLength: {
                                         value: 8,
                                         message: "Password must have at least 8 characters!"
-                                    },
-                                    pattern: {
-                                        value: /[A-Za-z]{2}/,
-                                        message: 'Password must have at least one capital alphabet!'
                                     }
                                 })
                             } 
