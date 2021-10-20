@@ -10,4 +10,4 @@ The purpose of this practice project are:
 * Improving design sense
 
 
-### [Live Website Link](https://shout-kids.firebaseapp.com/)
+### [Live Website Link](https://shout-kids.web.app/)
