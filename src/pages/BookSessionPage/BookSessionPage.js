@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
+import Process from '../SharedComponents/Process/Process';
 import './BookSessionPage.css';
 
 const BookSessionPage = () => {
@@ -14,7 +15,7 @@ const BookSessionPage = () => {
             <main>
                 <div className="container-fluid">
                     <div className="row hero-content-div">
-                        <div className="col-md gx-0 about-hero-left">
+                        <div className="col-md gx-0 hero-left">
                             <div></div>
                             {/* <img src={heroImage} alt="child trying to learn" className="img-fluid" /> */}
                         </div>
@@ -77,6 +78,8 @@ const BookSessionPage = () => {
                     </div>
                 </div>
             </main>
+
+            <Process></Process>
         </div>
     );
 };

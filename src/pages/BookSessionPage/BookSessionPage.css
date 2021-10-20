@@ -1,3 +1,8 @@
+.book-session-page .hero-left {
+    z-index: 1;
+    background: url('../../images/book-session-1.jpg') no-repeat center center /cover;
+}
+
 .book-session-page .hero-right > div {
     max-width: 750px;
     padding: 65px 50px 0 100px;

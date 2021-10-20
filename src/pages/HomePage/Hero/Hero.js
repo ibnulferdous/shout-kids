@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -14,7 +15,9 @@ const Hero = () => {
                         <div>
                             <h1 className="fw-700 mb-4">WELCOME TO SHOUT KIDS׳ SPEECH AND LANGUAGE THERAPY</h1>
                             <p className="h5 mb-5">Supporting children to develop their communication skills and reach their maximum potential</p>
-                            <button className="theme-button">Refer Your Child</button>
+                            <Link to='/book-a-session'>
+                                <button className="theme-button">Refer Your Child</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

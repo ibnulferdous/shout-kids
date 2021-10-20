@@ -1,6 +1,7 @@
 import React from 'react';
 import './AboutPage.css';
 import about2 from '../../images/about-2.jpg';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
     return (
@@ -23,7 +24,9 @@ const AboutPage = () => {
                                     Distinctive to us is our laser-like focus on the individual as we learn all we
                                     can about their diagnosis and its impact on their life in order to treat their
                                     communication deficit(s) to the best of our abilities.</p>
-                                <button className="theme-button">Refer Your Child</button>
+                                <Link to='/book-a-session'>
+                                    <button className="theme-button">Refer Your Child</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

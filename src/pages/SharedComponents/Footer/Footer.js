@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import footer1 from '../../../images/footer-1.jpg';
 import footer2 from '../../../images/footer-2.jpg';
 import './Footer.css';
@@ -12,7 +13,9 @@ const Footer = () => {
                         <div className="mb-5">
                             <h1 className="fw-700 mb-4">BOOK A FREE INITAL CONSULTATION NOW</h1>
                             <p className="h5 mb-5">If you are concerned about your child’s speech and language skills, don’t wait any longer. Reach out today and talk to one of our speech and language pathologist about a free consultation.</p>
-                            <button className="theme-button">Request a Consultation</button>
+                            <Link to='/book-a-session'>
+                                <button className="theme-button">Request a Consultation</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-md">
