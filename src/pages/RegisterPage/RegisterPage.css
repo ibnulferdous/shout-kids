@@ -1,0 +1,42 @@
+.form-div {
+    max-width: 350px;
+}
+
+.form-div input:not([type=submit]) {
+    font-family: 'Sen', sans-serif;
+    padding: 6px 15px 6px;
+    border: unset;
+    border-top: 1px solid #ffffff00;
+    border-right: 1px solid #ffffff00;
+    border-bottom: 1px solid var(--black);
+    border-left: 1px solid #ffffff00;
+    border-radius: 0;
+    outline: 0px solid var(--cream);
+    background: #ffffff00;
+}
+
+.form-div input:not([type=submit]):focus {
+    border-top: 1px solid #b3b3b3;
+    border-right: 1px solid #b3b3b3;
+    border-bottom: 1px solid var(--black);
+    border-left: 1px solid #b3b3b3;
+}
+
+.error-message {
+    color: var(--grey);
+    padding: 3px 0 0;
+    font-size: 15px;
+}
+
+.google-button {
+    text-decoration: none;
+    border: none;
+    background: #ffffff00;
+    color: var(--blue);
+    font-size: 35px;
+    padding: 5px;
+}
+
+.google-button:hover {
+    color: var(--grey);
+}

@@ -16,3 +16,11 @@
 .service-info-div li {
     list-style: square inside url("https://i.postimg.cc/nhbRr6wy/bullet-point-orange.png");
 }
+
+
+/* ---------- Media Query ------------- */
+@media (max-width: 576px) {
+    .services-details-page .section-1 {
+        background: url('../../images/blue-shape.png') no-repeat 120% 50% /50%;
+    }
+}

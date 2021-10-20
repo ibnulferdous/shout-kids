@@ -33,3 +33,19 @@
     border-radius: 75% 29% 22% 74% / 65% 20% 24% 48%;
     margin-right: -90px;
 }
+
+
+
+@media (max-width: 576px) {
+    .hero-left div {
+        min-height: 30vh;
+    }
+
+    .shapes-div {
+        margin-top: 0px;
+    }
+
+    .hero-right div {
+        padding: 50px 0 0;
+    }
+}

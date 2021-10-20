@@ -22,7 +22,7 @@ const ServiceCard = ({ service }) => {
     return (
         <div>
             <Col className="h-100">
-                <Card className="h-100 bg-transparent border-0">
+                <Card className="h-100 bg-transparent border-0 pb-5 pb-md-0">
                     <Card.Img variant="top" src={image} className="img-fluid" />
                     <Card.Body className="px-0">
                         <h3 className="fw-700 text-uppercase">{name}</h3>

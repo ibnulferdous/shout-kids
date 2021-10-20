@@ -44,3 +44,15 @@
 li {
     list-style: square inside url("https://i.postimg.cc/nhbRr6wy/bullet-point-orange.png");
 }
+
+.py-6 {
+  padding: 100px 0;
+}
+
+.pt-6 {
+  padding-top: 100px;
+}
+
+.pb-6 {
+  padding-bottom: 100px;
+}

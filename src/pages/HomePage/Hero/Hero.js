@@ -21,10 +21,10 @@ const Hero = () => {
                 <div className="w-100"></div>
                 <div className="row shapes-div">
                     <div className="col-md-7 d-flex justify-content-end mt-5">
-                        <div className="egg-shape"></div>
+                        <div className="egg-shape d-none d-md-block"></div>
                     </div>
                     <div className="col-md-5 gx-0 d-flex justify-content-end">
-                        <div className="triangle-shape"></div>
+                        <div className="triangle-shape d-none d-md-block"></div>
                     </div>
                 </div>
             </div>

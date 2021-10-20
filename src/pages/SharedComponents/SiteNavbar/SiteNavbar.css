@@ -14,10 +14,6 @@
     color: rgba(0,0,0,.55);
 }
 
-/* .user-info {
-
-} */
-
 .navbar-user-pic {
     max-width: 27px;
     border-radius: 50%;
@@ -26,4 +22,12 @@
 
 .nav-custom-link:hover {
     color: rgba(0,0,0,.7);
+}
+
+
+/* ---------- Media Query ------------- */
+@media (max-width: 576px) {
+    .nav-container {
+        min-height: 50px;
+    }
 }

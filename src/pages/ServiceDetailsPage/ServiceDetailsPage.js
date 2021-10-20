@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './ServiceDetailsPage.css';
 import serviceDetailsImageOne from '../../images/service-deatils-1.jpg';
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import SpecializationItem from './SpecializationItem';
 
 const ServiceDetailsPage = () => {
@@ -56,7 +56,7 @@ const ServiceDetailsPage = () => {
                         <div className="col-md-7 col-lg-8">
                             <p>{description}</p>
                         </div>
-                        <div className="col-md-5 col-lg-4">
+                        <div className="col-md-5 col-lg-4 pt-5 pt-md-0">
                             {
                                 serviceDetails?.therapist && <div>
                                     <img src={therapist.image} alt="therapist" className="therapist-image mb-3" />
@@ -78,7 +78,7 @@ const ServiceDetailsPage = () => {
                             <img src={serviceDetailsImageOne} alt={`service ${name}`} className="img-fluid" />
                         </div>
                         <div className="col-md">
-                            <h3 className="fw-700">TAILORED THERAPY TO BEST SUIT YOUR CHILDREN IN DEVELOPING THEIR COMMUNICATION SKILLS</h3>
+                            <h3 className="fw-700 pt-5 pt-md-0">TAILORED THERAPY TO BEST SUIT YOUR CHILDREN IN DEVELOPING THEIR COMMUNICATION SKILLS</h3>
                             <p className="mt-4 mb-5">Our children’s speech therapy center addresses communication disorders, motor skills, and offers specific individual treatments and speech therapy options. Let’s evaluate the benefits of individual speech therapy working.</p>
                             <Row xs={1} md={2} className="g-2">
                                 {

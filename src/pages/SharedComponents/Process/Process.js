@@ -10,7 +10,7 @@ const Process = () => {
         <section className="process-section">
             <div className="container my-5">
                 <h2 className="fw-700 my-4 text-center">WHAT TO EXPECT - THERAPY PROCESS</h2>
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-md-5">
                     <div className="col">
                         <img src={point1} alt="point one" />
                         <h3 className="h4 mb-3">Free Initial Phone Consultation</h3>
