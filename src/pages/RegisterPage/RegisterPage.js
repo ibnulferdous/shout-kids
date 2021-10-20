@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './RegisterPage.css';
 
@@ -11,21 +12,34 @@ const RegisterPage = () => {
     const onSubmit = (data) => {
         registrationUsingEmail(data);
     };
-    
 
     return (
         <div className="container px-2 py-6 text-center">
             <h1 className="text-uppercase fw-700">Create Account</h1>
-            <p className="mb-5 h5 fw-400 text-grey">New to Shout Kids? Create an account now!</p>
+            <p className="mb-5 text-grey">Alreay have an account?
+                <Link to='/login' className="mx-2 fw-700 link-text">Log in here</Link>
+            </p>
             <div className="form-div mx-auto">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="my-4">
-                        <input placeholder="Full Name" type="text" {...register('fullName', { required: true })} className="d-block w-100" />
+                        <input 
+                            placeholder="Full Name" 
+                            type="text" 
+                            defaultValue={user?.displayName ? user.displayName : ""}
+                            {...register('fullName', { required: true })} 
+                            className="d-block w-100" 
+                        />
                         {errors.fullName && errors.fullName.type === "required" && <p className="error-message">Full name is required</p>}
                     </div>
 
                     <div className="my-4">
-                        <input placeholder="Email" type="email" {...register('email', { required: true })} className="d-block w-100" />
+                        <input 
+                            placeholder="Email" 
+                            type="email" 
+                            defaultValue={user?.email ? user.email : ""}
+                            {...register('email', { required: true })} 
+                            className="d-block w-100" 
+                        />
                         {errors.email && errors.email.type === "required" && <p className="error-message">Email is required</p>}
                     </div>
 
@@ -58,7 +72,7 @@ const RegisterPage = () => {
                         successFirebase && <p className="error-message">{successFirebase}</p>
                     }
                     
-                    <input type="submit" className="d-block mt-4 mx-auto theme-button" />
+                    <input type="submit" className="d-block mt-4 mx-auto theme-button" value="Register" />
                 </form>
             </div>
             <div className="mt-5">

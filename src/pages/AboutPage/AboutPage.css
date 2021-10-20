@@ -1,0 +1,25 @@
+.about-hero-left {
+    z-index: 1;
+    background: url('../../images/about-1.jpg') no-repeat center center /cover;
+}
+
+.about-hero-left div {
+    min-height: 75vh;
+}
+
+.hero-right div {
+    max-width: 750px;
+    padding: 100px 50px 0 100px;
+}
+
+/* --------- Media Query -------------- */
+@media (max-width: 576px) {
+    .about-hero-left div {
+        min-height: 30vh;
+    }
+
+
+    .hero-right div {
+        padding: 50px 0 0;
+    }
+}

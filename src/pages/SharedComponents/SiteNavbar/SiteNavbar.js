@@ -32,7 +32,7 @@ const SiteNavbar = () => {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
                                 <Nav.Link as={Link} to="/">Home</Nav.Link>
-                                <Nav.Link as={Link} to="/service-details">Details</Nav.Link>
+                                <Nav.Link as={Link} to="/about">About</Nav.Link>
                             </Nav>
                             <Nav>
                                 {

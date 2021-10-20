@@ -1,4 +1,14 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from "firebase/auth";
+import { 
+    getAuth, 
+    signInWithPopup, 
+    GoogleAuthProvider, 
+    signOut, 
+    onAuthStateChanged, 
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword,
+    sendEmailVerification,
+    updateProfile
+} from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../pages/Firebase/firebase.init";
 
@@ -30,21 +40,6 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    // Log out
-    const logOut = () => {
-        setIsLoading(true);
-        signOut(auth)
-        .then(() => {
-            setErrorFirebase("");
-            setSuccessFirebase("Successfully logged out!");
-        })
-        .catch((error) => {
-            setErrorFirebase(error.message);
-            setSuccessFirebase("");
-        })
-        .finally(() => setIsLoading(false));
-    }
-
     // Create account using email and password
     const registrationUsingEmail = (input) => {
         const fullName = input.fullName;
@@ -56,11 +51,63 @@ const useFirebase = () => {
                 setUser(result.user);
                 setErrorFirebase("");
                 setSuccessFirebase("Account creation successful!");
+                setUserName(fullName);
+                verifyEmail();
             })
             .catch((error) => {
                 setErrorFirebase(error.message);
                 setSuccessFirebase("");
             });
+    }
+
+    // Set user's name 
+    const setUserName = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        })
+        .then(result => {
+            // User Name added
+        })
+    }
+
+    // verify email
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                // Verification email send...
+            })
+    }
+
+    // Log in using email and password
+    const emailLogIn = (input) => {
+        const email = input.email;
+        const password = input.password;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                setUser(result.user);
+                setErrorFirebase("");
+                setSuccessFirebase("Successfully logged in!");
+            })
+            .catch(error => {
+                setErrorFirebase(error.message);
+                setSuccessFirebase("");
+            })
+    }
+
+    // Log out
+    const logOut = () => {
+        setIsLoading(true);
+        signOut(auth)
+            .then(() => {
+                setErrorFirebase("");
+                setSuccessFirebase("Successfully logged out!");
+            })
+            .catch((error) => {
+                setErrorFirebase(error.message);
+                setSuccessFirebase("");
+            })
+            .finally(() => setIsLoading(false));
     }
 
     // User observer
@@ -88,7 +135,8 @@ const useFirebase = () => {
         successFirebase,
         logInUsingGoogle,
         logOut,
-        registrationUsingEmail
+        registrationUsingEmail,
+        emailLogIn
     }
 }
 

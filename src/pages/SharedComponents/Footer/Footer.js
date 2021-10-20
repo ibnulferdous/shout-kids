@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="container mt-5">
-                <div className="row g-md-5 align-items-center mb-5 pb-5">
+                <div className="row g-md-5 align-items-center mb-0 mb-md-5 pb-5">
                     <div className="col-md">
                         <div className="mb-5">
                             <h1 className="fw-700 mb-4">BOOK A FREE INITAL CONSULTATION NOW</h1>
@@ -20,7 +20,7 @@ const Footer = () => {
                             <div className="col-md">
                                 <img src={footer1} alt="kid" className="img-fluid" />
                             </div>
-                            <div className="col-md">
+                            <div className="col-md mt-3 mt-md-0">
                                 <img src={footer2} alt="kid" className="img-fluid" />
                             </div>
                         </div>

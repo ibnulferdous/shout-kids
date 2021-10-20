@@ -10,6 +10,7 @@ import RegisterPage from './pages/RegisterPage/RegisterPage';
 import AuthProvider from './contexts/AuthProvider';
 import ServiceDetailsPage from './pages/ServiceDetailsPage/ServiceDetailsPage';
 import PrivateRoute from './pages/LoginPage/PrivateRoute/PrivateRoute';
+import AboutPage from './pages/AboutPage/AboutPage';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           <Switch>
             <Route path="/home">
               <HomePage></HomePage>
+            </Route>
+            <Route path="/about">
+              <AboutPage></AboutPage>
             </Route>
             <PrivateRoute path="/service-details/:serviceId">
               <ServiceDetailsPage></ServiceDetailsPage>

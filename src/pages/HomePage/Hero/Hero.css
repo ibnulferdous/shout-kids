@@ -35,7 +35,7 @@
 }
 
 
-
+/* --------- Media Query -------------- */
 @media (max-width: 576px) {
     .hero-left div {
         min-height: 30vh;
