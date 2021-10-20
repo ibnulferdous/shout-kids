@@ -1,3 +1,14 @@
 .services-on-home {
     background: url('https://i.postimg.cc/HkWZxC6Z/blue-shape.png') no-repeat -10% 70%;
 }
+
+.service-card-home {
+    padding-bottom: 120px;
+}
+
+/* --------- Media Query -------------- */
+@media (max-width: 576px) {
+    .service-card-home {
+        padding-bottom: 0;
+    }
+}

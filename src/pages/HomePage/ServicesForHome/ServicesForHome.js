@@ -20,7 +20,7 @@ const ServicesForHome = () => {
                         <h2 className="fw-700 mb-4 text-center">FULL RANGE OF SERVICES FOR CHILDREN WITH SPEECH AND LANGUAGE DISORDERS</h2>
                     </div>
                 </div>
-                <Row xs={1} md={2} className="g-md-5 mb-5 pb-5">
+                <Row xs={1} md={2} className="g-md-5 mb-5 service-card-home">
                     {
                         services.map(service => <ServiceCard key={service.id} service={service} ></ServiceCard>)
                     }
