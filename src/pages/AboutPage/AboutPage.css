@@ -7,10 +7,33 @@
     min-height: 75vh;
 }
 
-.hero-right div {
+.about-page .hero-right div {
     max-width: 750px;
     padding: 100px 50px 0 100px;
 }
+
+.about-page .shapes-div {
+    margin-top: -200px;
+    overflow-x: hidden;
+}
+
+.about-page .egg-shape {
+    z-index: 0;
+    width: 424px;
+    height: 355px;
+    background-color: var(--yellow);
+    border-radius: 40% 60% 60% 40%/50%;
+}
+
+.about-page .triangle-shape {
+    z-index: 0;
+    width: 275px;
+    height: 290px;
+    background-color: var(--blue);
+    border-radius: 75% 29% 22% 74% / 65% 20% 24% 48%;
+    margin-right: -90px;
+}
+
 
 /* --------- Media Query -------------- */
 @media (max-width: 576px) {
@@ -18,8 +41,15 @@
         min-height: 30vh;
     }
 
+    .about-page .shapes-div {
+        margin-top: 0px;
+    }
 
-    .hero-right div {
+    .about-page .hero-right div {
         padding: 50px 0 0;
+    }
+
+    .testimonial-text {
+        text-align: center;
     }
 }

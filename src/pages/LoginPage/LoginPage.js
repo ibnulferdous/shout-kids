@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
@@ -13,7 +13,7 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="container px-2 py-6 text-center">
+        <div className="container px-2 py-7 text-center">
             <h1 className="text-uppercase fw-700">Log in</h1>
             <p className="mb-5 text-grey">Don't have an account?
                 <Link to='/register' className="mx-2 fw-700 link-text">Create an account</Link>
@@ -57,7 +57,7 @@ const LoginPage = () => {
             <div className="mt-5">
                 <h5>Or use Google account to log in</h5>
                 <button onClick={logInUsingGoogle} className="google-button">
-                    <i class="fab fa-google"></i>
+                    <i className="fab fa-google"></i>
                 </button>
             </div>
         </div>

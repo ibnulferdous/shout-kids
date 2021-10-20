@@ -3,7 +3,7 @@ import './Hero.css';
 
 const Hero = () => {
     return (
-        <main>
+        <main className="home-hero">
             <div className="container-fluid mt-5">
                 <div className="row hero-content-div">
                     <div className="col-md gx-0 hero-left">

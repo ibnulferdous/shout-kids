@@ -11,6 +11,7 @@ import AuthProvider from './contexts/AuthProvider';
 import ServiceDetailsPage from './pages/ServiceDetailsPage/ServiceDetailsPage';
 import PrivateRoute from './pages/LoginPage/PrivateRoute/PrivateRoute';
 import AboutPage from './pages/AboutPage/AboutPage';
+import BookSessionPage from './pages/BookSessionPage/BookSessionPage';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
             <Route path="/about">
               <AboutPage></AboutPage>
             </Route>
+            <PrivateRoute path="/book-a-session">
+              <BookSessionPage></BookSessionPage>
+            </PrivateRoute>
             <PrivateRoute path="/service-details/:serviceId">
               <ServiceDetailsPage></ServiceDetailsPage>
             </PrivateRoute>

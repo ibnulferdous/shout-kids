@@ -1,0 +1,52 @@
+.book-session-page .hero-right > div {
+    max-width: 750px;
+    padding: 65px 50px 0 100px;
+}
+
+.booking-form {
+    max-width: 400px;
+}
+
+.booking-form input:not([type=submit]),
+.booking-form .booking-text-area {
+    font-family: 'Sen', sans-serif;
+    padding: 6px 15px 6px;
+    border: unset;
+    border-top: 1px solid #ffffff00;
+    border-right: 1px solid #ffffff00;
+    border-bottom: 1px solid var(--black);
+    border-left: 1px solid #ffffff00;
+    border-radius: 0;
+    outline: 0px solid var(--cream);
+    background: #ffffff00;
+}
+
+.booking-form input:not([type=submit]):focus,
+.booking-form .booking-text-area:focus {
+    border-top: 1px solid #b3b3b3;
+    border-right: 1px solid #b3b3b3;
+    border-bottom: 1px solid var(--black);
+    border-left: 1px solid #b3b3b3;
+}
+
+.error-message {
+    color: var(--grey);
+    padding: 3px 0 0;
+    font-size: 15px;
+}
+
+
+/* --------- Media Query -------------- */
+@media (max-width: 576px) {
+    .hero-left div {
+        min-height: 30vh;
+    }
+
+    .home-hero .shapes-div {
+        margin-top: 0px;
+    }
+
+    .book-session-page .hero-right > div {
+        padding: 50px 0 0;
+    }
+}

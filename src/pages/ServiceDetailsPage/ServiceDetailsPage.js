@@ -27,8 +27,6 @@ const ServiceDetailsPage = () => {
         durationtext = `Duration: Up to 2 hours`;
     }
 
-    console.log(serviceDetails)
-
 
     return (
         <div className="services-details-page">

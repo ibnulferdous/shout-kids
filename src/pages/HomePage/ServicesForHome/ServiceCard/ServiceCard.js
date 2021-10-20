@@ -6,8 +6,6 @@ import './ServiceCard.css';
 const ServiceCard = ({ service }) => {
     
     const { name, image, description, duration, price, id } = service;
-    
-    console.log(service)
 
     let durationtext = "";
 
